@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema de Listado para Cálculo</title>
+</head>
+<body>
+   <div class="container">
+      <div class="formulary">
+         <h1>Sistema de Listado para Cálculo</h1>
+         <form method="post" action="calculo.php">
+            <div class="form-group">
+               <label for="Fecha">Fecha:</label>
+               <input type="date" name="Fecha" id="Fecha" required>
+            </div>
+            <div class="form-group">
+               <label for="producto">Producto:</label>
+               <input type="text" name="producto" pattern="[A-Za-z]{1,100}" id="producto" required>
+            </div>
+            <div class="form-group">
+               <label for="cantidad">Cantidad:</label>
+               <input type="number" name="cantidad" id="cantidad" pattern="{1,100}" required>
+            </div>
+            <div class="form-group">
+               <label for="precio">Precio:</label>
+               <input type="number" name="precio" id="precio" step="0.01" required>
+            </div>
+            <div class="form-group">
+               <label for="impuesto">Impuesto:</label>
+               <select name="impuesto" id="impuesto">
+                  <option value="10">10% de impuesto</option>
+                  <option value="20">20% de impuesto</option>
+                  <option value="30">30% de impuestos</option>
+                  <option value="40">40% de impuestos</option>
+               </select>
+            </div>
+            <button type="submit" name="submit">Aceptar</button>
+         </form>
+      </div>
+   </div>
+</body>
+</html>
